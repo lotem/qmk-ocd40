@@ -22,6 +22,8 @@
 #    include "ez.h"
 #elif defined(KEYBOARD_planck_light)
 #    include "light.h"
+#elif defined(KEYBOARD_planck_ocd40)
+#    include "ocd40.h"
 #elif defined(KEYBOARD_planck_thk)
 #    include "thk.h"
 #elif defined(KEYBOARD_planck_rev1)

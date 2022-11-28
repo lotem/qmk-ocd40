@@ -209,13 +209,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         #ifdef BACKLIGHT_ENABLE
           backlight_step();
         #endif
-        #ifdef KEYBOARD_planck_rev5
-          writePinLow(E6);
+        #if defined(KEYBOARD_planck_rev5)
+          writePinLow(BACKLIGHT_PIN);
         #endif
       } else {
         unregister_code(KC_RSFT);
-        #ifdef KEYBOARD_planck_rev5
-          writePinHigh(E6);
+        #if defined(KEYBOARD_planck_rev5)
+          writePinHigh(BACKLIGHT_PIN);
         #endif
       }
       return false;
